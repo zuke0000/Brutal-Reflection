@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://3ul5hdgfypf"]
+
+[ext_resource type="PackedScene" uid="uid://c5gl6hg76iukg" path="res://Maps/test.tscn" id="1_v6p4u"]
+[ext_resource type="PackedScene" uid="uid://b2i6gt25fc4ls" path="res://UI/scenes/menus/main_menu/main_menu_with_animations.tscn" id="2_v6p4u"]
+
+[node name="3dMainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Test" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_v6p4u")]
+
+[node name="MainMenu" parent="." instance=ExtResource("2_v6p4u")]
+layout_mode = 1
+offset_left = -2.0
+offset_right = -2.0
