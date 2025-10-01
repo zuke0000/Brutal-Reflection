@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3ul5hdgfypf"]
 
-[ext_resource type="PackedScene" uid="uid://c5gl6hg76iukg" path="res://Maps/test.tscn" id="1_v6p4u"]
+[ext_resource type="PackedScene" uid="uid://c5gl6hg76iukg" path="res://Maps/3D_main_menu_map.tscn" id="1_v6p4u"]
 [ext_resource type="PackedScene" uid="uid://b2i6gt25fc4ls" path="res://UI/scenes/menus/main_menu/main_menu_with_animations.tscn" id="2_v6p4u"]
 
 [node name="3dMainMenu" type="Control"]

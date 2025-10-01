@@ -12,7 +12,7 @@ background_mode = 2
 sky = SubResource("Sky_xregt")
 ambient_light_source = 3
 
-[node name="Test" type="Node3D"]
+[node name="3DMainMenuMap" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.755339, -0.08711427, 0.6495183, 0, 0.9911253, 0.13293105, -0.65533423, -0.10040801, 0.74863565, 0.7756888, 0.7041383, 1.7509874)
