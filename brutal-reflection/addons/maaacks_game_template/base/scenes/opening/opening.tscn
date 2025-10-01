@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://sikc02ddepyt"]
+[gd_scene load_steps=3 format=3 uid="uid://sikc02ddepyt"]
 
 [ext_resource type="Script" uid="uid://dtco0s8byckx6" path="res://addons/maaacks_game_template/base/scenes/opening/opening.gd" id="1_fcjph"]
+[ext_resource type="AudioStream" uid="uid://dq86jcq5xsvuu" path="res://Assets/Sounds/UI/sum_ambience.mp3" id="2_88yi5"]
 
 [node name="Opening" type="Control"]
 layout_mode = 3
@@ -14,6 +15,7 @@ next_scene = "uid://3ul5hdgfypf"
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
+stream = ExtResource("2_88yi5")
 autoplay = true
 bus = &"Music"
 
