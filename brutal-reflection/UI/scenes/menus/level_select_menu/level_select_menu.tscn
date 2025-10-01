@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsgo20vyapo6c"]
 
-[ext_resource type="Script" path="res://UI/scenes/menus/level_select_menu/level_select_menu.gd" id="1_1nv3i"]
-[ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/capture_focus.gd" id="2_x3s7r"]
-[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="3_4dj4h"]
+[ext_resource type="Script" uid="uid://pfn6r2vxdadq" path="res://UI/scenes/menus/level_select_menu/level_select_menu.gd" id="1_1nv3i"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/scripts/capture_focus.gd" id="2_x3s7r"]
+[ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="3_4dj4h"]
 
 [node name="LevelSelectMenu" type="Control"]
 layout_mode = 3
@@ -43,7 +43,7 @@ item_0/text = "1 - ExampleLevel"
 
 [node name="SceneLister" type="Node" parent="."]
 script = ExtResource("3_4dj4h")
-files = Array[String](["res://UI/scenes/game_scene/levels/level_1.tscn", "res://UI/scenes/game_scene/levels/level_2.tscn", "res://UI/scenes/game_scene/levels/level_3.tscn"])
+files = Array[String](["res://Maps/3D_main_menu_map.tscn", "res://UI/scenes/game_scene/levels/level_1.tscn"])
 directory = "res://UI/scenes/game_scene/levels"
 
 [connection signal="item_activated" from="Control/LevelButtonsContainer" to="." method="_on_level_buttons_container_item_activated"]

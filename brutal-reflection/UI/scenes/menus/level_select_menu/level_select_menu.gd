@@ -18,8 +18,14 @@ func _ready() -> void:
 func add_levels_to_container() -> void:
 	level_buttons_container.clear()
 	level_paths.clear()
-	var game_state := GameState.get_or_create_state()
-	for file_path in game_state.level_states.keys():
+	#var game_state := GameState.get_or_create_state()
+	#for file_path in game_state.level_states.keys():
+	#for file_path in level_paths:
+	## NOTE: This has been modified to allow any level in SceneLister.files
+	## to be selected.
+	## Normally only levels previously completed are loaded from GameState save.
+	
+	for file_path in $SceneLister.files:
 		var file_name : String = file_path.get_file()  # e.g., "level_1.tscn"
 		file_name = file_name.trim_suffix(".tscn")  # Remove the ".tscn" extension
 		file_name = file_name.replace("_", " ")  # Replace underscores with spaces
