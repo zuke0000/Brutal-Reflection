@@ -32,6 +32,9 @@ layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/InputMappingContainer"]
+layout_mode = 2
+
 [node name="Label" type="Label" parent="VBoxContainer/InputMappingContainer"]
 layout_mode = 2
 text = "Actions & Inputs"
@@ -41,6 +44,19 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(560, 480)
 layout_mode = 2
+action_group_names = Array[String](["Primary", "Secondary", "Tertiary"])
+input_action_names = Array[StringName]([&"move_forward", &"move_backward", &"move_up", &"move_down", &"move_left", &"move_right", &"interact", &"forward"])
+readable_action_names = Array[String](["Move Forward", "Move Backward", "Move Up", "Move Down", "Move Left", "Move Right", "Interact", "Forward"])
+action_name_map = {
+&"forward": "Forward",
+&"interact": "Interact",
+&"move_backward": "Move Backward",
+&"move_down": "Move Down",
+&"move_forward": "Move Forward",
+&"move_left": "Move Left",
+&"move_right": "Move Right",
+&"move_up": "Move Up"
+}
 
 [node name="InputActionsTree" parent="VBoxContainer/InputMappingContainer" instance=ExtResource("5_b2whh")]
 unique_name_in_owner = true
@@ -57,6 +73,7 @@ layout_mode = 2
 text = "Reset"
 
 [node name="KeyAssignmentDialog" type="ConfirmationDialog" parent="."]
+oversampling_override = 1.0
 title = "Assign Key"
 size = Vector2i(400, 158)
 dialog_text = "
