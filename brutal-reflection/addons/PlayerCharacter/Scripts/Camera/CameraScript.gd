@@ -36,7 +36,7 @@ var headBobValue : float
 @export_group("Input variables")
 var mouseInput : Vector2 
 #@export var mouseInputSpeed : float 
-var mouseInputSpeed : float = PlayerConfig.get_config(AppSettings.INPUT_SECTION, "MouseSensitivity", 1.0)
+var mouseInputSpeed : float = PlayerConfig.get_config(AppSettings.INPUT_SECTION, "MouseSensitivity", 1.0) * 0.5
 var playCharInputDir : Vector2
 
 #Mouse variables
@@ -52,7 +52,6 @@ var mouseFree : bool = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) #set mouse as captured
-	print("mouse speed: ", mouseInputSpeed)
 func _unhandled_input(event):
 	#this function manage camera rotation (360 on x axis, blocked at <= -60 and >= 60 on y axis, to not having the character do a complete head turn, which will be kinda weird)
 	if event is InputEventMouseMotion:
