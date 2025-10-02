@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cl416gdb1fgwr"]
+[gd_scene load_steps=3 format=3 uid="uid://cl416gdb1fgwr"]
 
 [ext_resource type="PackedScene" uid="uid://d7te75il06t7" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/option_control/option_control.tscn" id="1_16hlr"]
+[ext_resource type="Script" uid="uid://br3c33bpgtods" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/option_control/label.gd" id="2_bhgye"]
 
 [node name="OptionControl" instance=ExtResource("1_16hlr")]
 custom_minimum_size = Vector2(0, 28)
@@ -17,3 +18,10 @@ step = 0.05
 value = 1.0
 tick_count = 11
 ticks_on_borders = true
+
+[node name="Label" type="Label" parent="." index="2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+script = ExtResource("2_bhgye")
+
+[connection signal="value_changed" from="HSlider" to="Label" method="_on_h_slider_value_changed"]
